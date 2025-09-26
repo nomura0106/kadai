@@ -1,0 +1,17 @@
+<h1>投稿編集</h1>
+
+<%= form_with(model: @article, local: true) do |f| %>
+  <p>
+    <%= f.label :title, "タイトル" %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content, "投稿内容" %><br>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit "投稿更新" %>
+  </p>
+<% end %>
+
+<%= link_to "投稿詳細へ戻る", articles_path %>
