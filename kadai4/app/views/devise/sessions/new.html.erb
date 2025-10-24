@@ -1,0 +1,14 @@
+<!-- app/views/devise/sessions/new.html.erb -->
+<h2>ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= f.label :email, "メールアドレス" %><br />
+  <%= f.email_field :email, autofocus: true %><br />
+
+  <%= f.label :password, "パスワード" %><br />
+  <%= f.password_field :password %><br />
+
+  <%= f.submit "ログイン" %>
+<% end %>
+
+<%= render "devise/shared/links" %>

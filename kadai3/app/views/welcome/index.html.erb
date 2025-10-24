@@ -1,0 +1,11 @@
+<!-- app/views/welcome/index.html.erb -->
+<h1>トップ画面</h1>
+
+<% if logged_in? %>
+  <p>こんにちは、<%= current_user.name %>さん！</p>
+  <%= link_to 'マイページ', user_path(current_user) %> |
+  <%= link_to 'ログアウト', session_path, method: :delete %>
+<% else %>
+  <%= link_to 'サインアップ', new_user_path %> |
+  <%= link_to 'ログイン', new_session_path %>
+<% end %>

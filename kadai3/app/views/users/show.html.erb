@@ -1,0 +1,10 @@
+<!-- app/views/users/show.html.erb -->
+<h1>マイページ画面</h1>
+
+<p>名前: <%= @user.name %></p>
+<p>メールアドレス: <%= @user.email %></p>
+
+<p>ハッシュ化されたパスワード: <%= @user.password_digest %></p>
+
+<%= link_to 'ログアウト', session_path, method: :delete %> |
+<%= link_to 'トップに戻る', root_path %>

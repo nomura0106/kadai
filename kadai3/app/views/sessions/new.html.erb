@@ -1,0 +1,17 @@
+<h1>ログイン</h1>
+
+<%= form_with url: session_path, method: :post do |form| %>
+  <div>
+    <%= form.label :メールアドレス %>
+    <%= form.text_field :メールアドレス %>
+  </div>
+
+  <div>
+    <%= form.label :パスワード %>
+    <%= form.password_field :パスワード %>
+  </div>
+
+  <div>
+    <%= form.submit "ログイン" %>
+  </div>
+<% end %>
